@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 安全问题 / Security reports
+    url: https://github.com/liao69040-collab/hengzhen-grid-atlas/blob/main/SECURITY.md
+    about: 先阅读安全报告方式，不在公开 Issue 中发送可利用细节或秘密。
+  - name: 本地演示说明 / Local demo guide
+    url: https://github.com/liao69040-collab/hengzhen-grid-atlas/blob/main/demo/README.md
+    about: 查看合成数据、启动方式和演示账号边界。

@@ -1,0 +1,61 @@
+{
+  "name": "@hengzhen/recruitment-platform-api",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24 <25"
+  },
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "clean": "node -e \"require('node:fs').rmSync('dist', { recursive: true, force: true })\"",
+    "build": "npm run clean && tsc -p tsconfig.build.json",
+    "start": "node dist/src/index.js",
+    "typecheck": "tsc --noEmit",
+    "check": "npm run typecheck && npm run test",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "tsx scripts/migrate.ts",
+    "db:migrate:prod": "node dist/scripts/migrate.js",
+    "admin:create": "tsx scripts/create-admin.ts",
+    "admin:create:prod": "node dist/scripts/create-admin.js",
+    "data:import-snapshots": "tsx scripts/import-snapshots.ts",
+    "data:import-snapshots:prod": "node dist/scripts/import-snapshots.js",
+    "data:import-canonical": "tsx scripts/import-canonical.ts",
+    "data:import-canonical:prod": "node dist/scripts/import-canonical.js",
+    "data:import-early-batch": "tsx scripts/import-early-batch.ts",
+    "data:import-early-batch:prod": "node dist/scripts/import-early-batch.js",
+    "data:import-provincial-recruitment": "tsx scripts/import-provincial-recruitment.ts",
+    "data:import-provincial-recruitment:prod": "node dist/scripts/import-provincial-recruitment.js",
+    "data:import-school-destination-outcomes": "tsx scripts/import-school-destination-outcomes.ts",
+    "data:import-school-destination-outcomes:prod": "node dist/scripts/import-school-destination-outcomes.js",
+    "data:import-grid-query": "tsx scripts/import-grid-query.ts",
+    "data:import-grid-query:prod": "node dist/scripts/import-grid-query.js",
+    "data:import-grid-map": "tsx scripts/import-grid-map.ts",
+    "data:import-grid-map:prod": "node dist/scripts/import-grid-map.js",
+    "data:import-grid-information": "tsx scripts/import-grid-information.ts",
+    "data:import-grid-information:prod": "node dist/scripts/import-grid-information.js"
+  },
+  "dependencies": {
+    "@fastify/cookie": "11.0.2",
+    "@fastify/cors": "11.2.0",
+    "@fastify/helmet": "13.0.2",
+    "@fastify/rate-limit": "11.2.0",
+    "argon2": "0.45.1",
+    "dotenv": "17.2.3",
+    "drizzle-orm": "0.45.2",
+    "fastify": "5.12.5",
+    "pg": "8.16.3",
+    "zod": "4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "24.10.1",
+    "@types/pg": "8.15.6",
+    "drizzle-kit": "0.31.10",
+    "esbuild": "0.28.2",
+    "tsx": "4.21.0",
+    "typescript": "6.0.2",
+    "vitest": "4.1.11"
+  }
+}

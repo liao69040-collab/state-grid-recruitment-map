@@ -1,0 +1,29 @@
+name: CI
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: |
+            package-lock.json
+            admin-app/package-lock.json
+            platform/api/package-lock.json
+      - run: npm ci
+      - run: npm ci --prefix admin-app
+      - run: npm ci --prefix platform/api
+      - run: npm run release:check
+      - run: npm run test:demo
+      - run: npm run test:api
+      - run: npm run build:all

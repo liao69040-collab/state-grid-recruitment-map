@@ -1,0 +1,28 @@
+{
+  "name": "ai-education-admin",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "国家电网招聘数据地图独立管理端",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 4174",
+    "build": "npm run typecheck && vite build",
+    "typecheck": "vue-tsc --noEmit",
+    "preview": "vite preview --host 127.0.0.1 --port 4181",
+    "smoke": "node scripts/smoke.mjs",
+    "test": "node --experimental-strip-types --test scripts/display.test.mjs",
+    "test:render": "node --test scripts/render-details.test.mjs"
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.3.2",
+    "vue": "^3.5.35",
+    "vue-router": "^5.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.0",
+    "@vitejs/plugin-vue": "^6.0.7",
+    "typescript": "~6.0.3",
+    "vite": "^8.0.16",
+    "vue-tsc": "^3.3.3"
+  }
+}

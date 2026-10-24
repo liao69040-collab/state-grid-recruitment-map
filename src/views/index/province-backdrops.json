@@ -1,0 +1,214 @@
+{
+  "note": "34个地图地区的真实高清标志物照片，依据开放授权真实原图，使用原图或源站官方高清尺寸制作，未上采样；来源、作者、许可与处理见同站credits.html。照片仅为装饰，不改变招聘范围或资格。",
+  "basePath": "/assets/province-backdrops/",
+  "images": {
+    "110000": "110000-landmark-hd-v2-20261004.webp",
+    "120000": "120000-landmark-hd-v2-20261004.webp",
+    "130000": "130000-landmark-hd-v2-20261004.webp",
+    "140000": "140000-landmark-hd-v2-20261004.webp",
+    "150000": "150000-landmark-hd-v2-20261004.webp",
+    "210000": "210000-landmark-hd-v2-20261004.webp",
+    "220000": "220000-landmark-hd-v2-20261004.webp",
+    "230000": "230000-landmark-hd-v2-20261004.webp",
+    "310000": "310000-landmark-hd-v2-20261004.webp",
+    "320000": "320000-landmark-hd-v2-20261004.webp",
+    "330000": "330000-landmark-hd-v2-20261004.webp",
+    "340000": "340000-landmark-hd-v2-20261004.webp",
+    "350000": "350000-landmark-hd-v2-20261004.webp",
+    "360000": "360000-landmark-hd-v2-20261004.webp",
+    "370000": "370000-landmark-hd-v2-20261004.webp",
+    "410000": "410000-landmark-hd-v2-20261004.webp",
+    "420000": "420000-landmark-hd-v2-20261004.webp",
+    "430000": "430000-landmark-hd-v2-20261004.webp",
+    "440000": "440000-landmark-hd-v2-20261004.webp",
+    "450000": "450000-landmark-hd-v2-20261004.webp",
+    "460000": "460000-landmark-hd-v2-20261004.webp",
+    "500000": "500000-landmark-hd-v2-20261004.webp",
+    "510000": "510000-landmark-hd-v2-20261004.webp",
+    "520000": "520000-landmark-hd-v2-20261004.webp",
+    "530000": "530000-landmark-hd-v2-20261004.webp",
+    "540000": "540000-landmark-hd-v2-20261004.webp",
+    "610000": "610000-landmark-hd-v2-20261004.webp",
+    "620000": "620000-landmark-hd-v2-20261004.webp",
+    "630000": "630000-landmark-hd-v2-20261004.webp",
+    "640000": "640000-landmark-hd-v2-20261004.webp",
+    "650000": "650000-landmark-hd-v2-20261004.webp",
+    "710000": "710000-landmark-hd-v2-20261004.webp",
+    "810000": "810000-landmark-hd-v2-20261004.webp",
+    "820000": "820000-landmark-hd-v2-20261004.webp"
+  },
+  "positions": {
+    "110000": "50% 50%",
+    "120000": "50% 50%",
+    "130000": "50% 50%",
+    "140000": "50% 50%",
+    "150000": "50% 50%",
+    "210000": "50% 50%",
+    "220000": "50% 50%",
+    "230000": "50% 50%",
+    "310000": "50% 50%",
+    "320000": "50% 50%",
+    "330000": "50% 50%",
+    "340000": "50% 50%",
+    "350000": "50% 50%",
+    "360000": "50% 50%",
+    "370000": "50% 50%",
+    "410000": "50% 50%",
+    "420000": "50% 50%",
+    "430000": "50% 50%",
+    "440000": "50% 50%",
+    "450000": "50% 50%",
+    "460000": "50% 50%",
+    "500000": "50% 50%",
+    "510000": "50% 50%",
+    "520000": "50% 50%",
+    "530000": "50% 50%",
+    "540000": "50% 50%",
+    "610000": "50% 50%",
+    "620000": "50% 50%",
+    "630000": "50% 50%",
+    "640000": "50% 50%",
+    "650000": "50% 50%",
+    "710000": "50% 50%",
+    "810000": "50% 50%",
+    "820000": "50% 50%"
+  },
+  "attributions": {
+    "110000": {
+      "label": "天坛",
+      "href": "/assets/province-backdrops/credits.html#110000"
+    },
+    "120000": {
+      "label": "天津之眼",
+      "href": "/assets/province-backdrops/credits.html#120000"
+    },
+    "130000": {
+      "label": "赵州桥",
+      "href": "/assets/province-backdrops/credits.html#130000"
+    },
+    "140000": {
+      "label": "平遥古城",
+      "href": "/assets/province-backdrops/credits.html#140000"
+    },
+    "150000": {
+      "label": "内蒙古草原",
+      "href": "/assets/province-backdrops/credits.html#150000"
+    },
+    "210000": {
+      "label": "沈阳故宫",
+      "href": "/assets/province-backdrops/credits.html#210000"
+    },
+    "220000": {
+      "label": "长白山天池",
+      "href": "/assets/province-backdrops/credits.html#220000"
+    },
+    "230000": {
+      "label": "哈尔滨圣索菲亚教堂",
+      "href": "/assets/province-backdrops/credits.html#230000"
+    },
+    "310000": {
+      "label": "东方明珠",
+      "href": "/assets/province-backdrops/credits.html#310000"
+    },
+    "320000": {
+      "label": "拙政园借景北寺塔",
+      "href": "/assets/province-backdrops/credits.html#320000"
+    },
+    "330000": {
+      "label": "雷峰塔",
+      "href": "/assets/province-backdrops/credits.html#330000"
+    },
+    "340000": {
+      "label": "黄山",
+      "href": "/assets/province-backdrops/credits.html#340000"
+    },
+    "350000": {
+      "label": "福建土楼",
+      "href": "/assets/province-backdrops/credits.html#350000"
+    },
+    "360000": {
+      "label": "滕王阁",
+      "href": "/assets/province-backdrops/credits.html#360000"
+    },
+    "370000": {
+      "label": "泰山十八盘",
+      "href": "/assets/province-backdrops/credits.html#370000"
+    },
+    "410000": {
+      "label": "龙门石窟",
+      "href": "/assets/province-backdrops/credits.html#410000"
+    },
+    "420000": {
+      "label": "黄鹤楼",
+      "href": "/assets/province-backdrops/credits.html#420000"
+    },
+    "430000": {
+      "label": "张家界武陵源",
+      "href": "/assets/province-backdrops/credits.html#430000"
+    },
+    "440000": {
+      "label": "广州塔",
+      "href": "/assets/province-backdrops/credits.html#440000"
+    },
+    "450000": {
+      "label": "桂林漓江",
+      "href": "/assets/province-backdrops/credits.html#450000"
+    },
+    "460000": {
+      "label": "三亚海滨",
+      "href": "/assets/province-backdrops/credits.html#460000"
+    },
+    "500000": {
+      "label": "洪崖洞",
+      "href": "/assets/province-backdrops/credits.html#500000"
+    },
+    "510000": {
+      "label": "乐山大佛",
+      "href": "/assets/province-backdrops/credits.html#510000"
+    },
+    "520000": {
+      "label": "黄果树瀑布",
+      "href": "/assets/province-backdrops/credits.html#520000"
+    },
+    "530000": {
+      "label": "大理三塔",
+      "href": "/assets/province-backdrops/credits.html#530000"
+    },
+    "540000": {
+      "label": "布达拉宫",
+      "href": "/assets/province-backdrops/credits.html#540000"
+    },
+    "610000": {
+      "label": "大雁塔",
+      "href": "/assets/province-backdrops/credits.html#610000"
+    },
+    "620000": {
+      "label": "鸣沙山月牙泉",
+      "href": "/assets/province-backdrops/credits.html#620000"
+    },
+    "630000": {
+      "label": "青海湖油菜花",
+      "href": "/assets/province-backdrops/credits.html#630000"
+    },
+    "640000": {
+      "label": "沙坡头黄河",
+      "href": "/assets/province-backdrops/credits.html#640000"
+    },
+    "650000": {
+      "label": "天山天池",
+      "href": "/assets/province-backdrops/credits.html#650000"
+    },
+    "710000": {
+      "label": "台北101",
+      "href": "/assets/province-backdrops/credits.html#710000"
+    },
+    "810000": {
+      "label": "维多利亚港夜景",
+      "href": "/assets/province-backdrops/credits.html#810000"
+    },
+    "820000": {
+      "label": "大三巴牌坊",
+      "href": "/assets/province-backdrops/credits.html#820000"
+    }
+  }
+}

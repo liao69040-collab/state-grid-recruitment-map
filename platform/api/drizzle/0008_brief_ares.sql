@@ -1,0 +1,6 @@
+ALTER TABLE "recruitment_metrics" ADD COLUMN "destination_scope" varchar(40) DEFAULT 'province_company' NOT NULL;--> statement-breakpoint
+ALTER TABLE "recruitment_metrics" ADD COLUMN "discipline_group" varchar(40) DEFAULT 'all' NOT NULL;--> statement-breakpoint
+ALTER TABLE "recruitment_metrics" ADD COLUMN "major_category" varchar(80);--> statement-breakpoint
+CREATE INDEX "recruitment_metrics_school_destination_idx" ON "recruitment_metrics" USING btree ("cohort_year","school_id","destination_scope","province_id","company_id","discipline_group");--> statement-breakpoint
+ALTER TABLE "recruitment_metrics" ADD CONSTRAINT "recruitment_metrics_destination_scope_ck" CHECK ("recruitment_metrics"."destination_scope" in ('network_total', 'province_company', 'province', 'company', 'unknown'));--> statement-breakpoint
+ALTER TABLE "recruitment_metrics" ADD CONSTRAINT "recruitment_metrics_discipline_group_ck" CHECK ("recruitment_metrics"."discipline_group" in ('all', 'electrical', 'non_electrical', 'unknown'));

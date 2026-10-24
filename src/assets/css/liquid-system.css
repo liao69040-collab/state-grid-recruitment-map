@@ -1,0 +1,114 @@
+/* Translucent navigation frames stronger reading surfaces. Real geography and
+   public-data suppression stay in the existing map/data components. */
+.liquid-system {
+  --liquid-ink: #103858; --liquid-muted: #365b75;
+  --liquid-edge: rgba(255,255,255,.88);
+  --liquid-shadow: inset 0 1px 0 rgba(255,255,255,.96), inset 0 -1px 0 rgba(149,184,204,.15), 0 12px 32px rgba(35,78,108,.10);
+  position: relative; isolation: isolate; width: 100%; height: 100%;
+  color: var(--liquid-ink); font-family: -apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif;
+}
+.liquid-system.liquid-system > .power-atmosphere { z-index: 0; }
+.liquid-system > :is(.app-viewport,.dashboard-shell,.mobile-query,.information-mobile) { z-index: 1; }
+.liquid-system.liquid-system > .app-viewport { background: transparent; }
+.liquid-system .dashboard-shell.glass-map { --ink: #103858; --muted: #365b75; background: transparent; }
+.liquid-system .dashboard-shell.glass-map::after { background: linear-gradient(180deg,#f7fbff18,transparent 65%,#e8f4fd35); }
+.liquid-system .dashboard-shell.glass-map .top-shell {
+  border: 1px solid var(--liquid-edge); border-radius: 0 0 23px 23px;
+  background: linear-gradient(115deg,rgba(253,255,255,.64),rgba(240,250,255,.44));
+  -webkit-backdrop-filter: blur(18px) saturate(120%); backdrop-filter: blur(18px) saturate(120%); box-shadow: var(--liquid-shadow);
+}
+.liquid-system .dashboard-shell.glass-map :is(.glass-navigation,.glass-search,.glass-filter,.glass-layer-tabs,.grid-legend,.map-controls,.panel-launchers button) {
+  border-color: var(--liquid-edge); background-color: rgba(249,253,255,.64);
+  -webkit-backdrop-filter: blur(12px) saturate(118%); backdrop-filter: blur(12px) saturate(118%); box-shadow: var(--liquid-shadow);
+}
+.liquid-system .dashboard-shell.glass-map :is(.glass-national-total,.glass-quick-start) {
+  color: var(--liquid-ink); border-color: var(--liquid-edge);
+  background-image: linear-gradient(110deg,rgba(250,254,255,.93),rgba(243,250,255,.84)),url('/assets/grid-atmosphere/transmission-20261004.webp');
+  background-size: cover; background-position: 58% 64%;
+  -webkit-backdrop-filter: blur(14px) saturate(120%); backdrop-filter: blur(14px) saturate(120%); box-shadow: var(--liquid-shadow);
+}
+.liquid-system .dashboard-shell.glass-map :is(.glass-national-total small,.glass-national-total > div,.quick-intro small,.glass-quick-start label span) { color: #365b75; }
+.liquid-system .dashboard-shell.glass-map .map-context-preview:not(.has-decoration) {
+  background: linear-gradient(110deg,rgba(250,254,255,.94),rgba(244,251,255,.83)),url('/assets/grid-atmosphere/transmission-20261004.webp') 58% 64%/cover;
+}
+.liquid-system .dashboard-shell.glass-map .map-context-preview.has-decoration {
+  --preview-ink: #082d50; --preview-muted: #214a68; --preview-reading-bg: rgba(248,252,255,.52);
+  border-color: rgba(255,255,255,.92); box-shadow: var(--liquid-shadow);
+}
+.liquid-system .dashboard-shell.glass-map .has-decoration .preview-identity::before {
+  background: none;
+}
+.liquid-system .dashboard-shell.glass-map .has-decoration .province-decoration::after {
+  background: linear-gradient(180deg,rgba(248,252,255,.94) 0px,rgba(248,252,255,.86) 112px,rgba(248,252,255,.35) 175px,rgba(248,252,255,0) 265px),
+    linear-gradient(90deg,rgba(239,248,254,.4),rgba(239,248,254,.22) 38%,rgba(239,248,254,.04) 100%),
+    linear-gradient(180deg,rgba(239,248,254,.02),rgba(239,248,254,.04) 35%,rgba(239,248,254,.12));
+}
+.liquid-system .dashboard-shell.glass-map .has-decoration .preview-disclaimer {
+  color: #0b3157; background: rgba(248,252,255,.84); border-radius: 7px; padding: 3px 6px;
+}
+.liquid-system .dashboard-shell.glass-map :is(.preview-reading-surface,.preview-ranking,.preview-conditions li) { -webkit-backdrop-filter: blur(1px) saturate(108%); backdrop-filter: blur(1px) saturate(108%); }
+.liquid-system .dashboard-shell.glass-map :is(.grid-group-name,.preview-batches div,.preview-condition-link,.preview-conditions p) { color: #0b3157; font-weight: 650; }
+.liquid-system .dashboard-shell.glass-map :is(.overlay-card,.modal-card,.detail-drawer,.applicant-form,.result-panel) {
+  color: var(--liquid-ink); background: rgba(247,252,255,.93); border-color: var(--liquid-edge);
+  -webkit-backdrop-filter: blur(18px) saturate(115%); backdrop-filter: blur(18px) saturate(115%); box-shadow: var(--liquid-shadow);
+}
+.liquid-system .dashboard-shell.glass-map .source-foot { flex-wrap: wrap; gap: 4px 18px; color: #365b75; }
+.liquid-system .dashboard-shell.glass-map .source-foot .site-filing { display: inline-flex; }
+.liquid-system .dashboard-shell.glass-map .map-scene { filter: drop-shadow(0 8px 8px rgba(33,74,104,.08)); }
+body .liquid-system .mobile-query.mobile-query { --mq-ink: #103858; --mq-muted: #365b75; --mq-card: rgba(252,254,255,.90); --mq-glass: rgba(248,253,255,.72); --mq-active-glass: rgba(219,239,250,.92); background: transparent; }
+body .liquid-system .mobile-query.mobile-query .mq-ambient { opacity: .35; }
+body .liquid-system .mobile-query.mobile-query :is(.mq-header,.mq-context-bar) { background: rgba(244,251,255,.70); border-bottom: 0; }
+body .liquid-system .mobile-query.mobile-query .mq-header { -webkit-backdrop-filter: blur(12px) saturate(115%); backdrop-filter: blur(12px) saturate(115%); }
+body .liquid-system .mobile-query.mobile-query :is(.mq-bottom-nav,.mq-guide-tabs,.mq-search,.mq-segment,.mq-scope-tabs) {
+  background: rgba(248,253,255,.73); border-color: var(--liquid-edge); box-shadow: var(--liquid-shadow);
+  -webkit-backdrop-filter: blur(12px) saturate(115%); backdrop-filter: blur(12px) saturate(115%);
+}
+body .liquid-system .mobile-query.mobile-query :is(.mq-summary,.mq-quick-card) {
+  background: linear-gradient(115deg,rgba(249,253,255,.94),rgba(237,249,254,.86)),url('/assets/grid-atmosphere/transmission-20261004.webp') 58% 64%/cover;
+  border-color: var(--liquid-edge); box-shadow: var(--liquid-shadow); color: #103858;
+}
+body .liquid-system .mobile-query.mobile-query :is(.mq-login-sheet,.mq-detail-sheet,.mq-help-sheet) { background: rgba(249,253,255,.96); box-shadow: var(--liquid-shadow); }
+body .liquid-system .information-mobile.information-mobile { --info-ink: #103858; --info-muted: #365b75; background: transparent; }
+body .liquid-system .information-mobile.information-mobile :is(.info-header,.insight-tabs,.info-batch-tabs,.info-bottom-nav,.information-filter) {
+  background: rgba(248,253,255,.75); border-color: var(--liquid-edge); box-shadow: var(--liquid-shadow);
+  -webkit-backdrop-filter: blur(12px) saturate(115%); backdrop-filter: blur(12px) saturate(115%);
+}
+body .liquid-system .information-mobile.information-mobile :is(.info-card,.info-ranking,.insight-company,.insight-card,.fact-card) { background: rgba(252,254,255,.91); border-color: var(--liquid-edge); box-shadow: inset 0 1px 0 white,0 5px 18px rgba(35,78,108,.06); }
+body .liquid-system .information-mobile.information-mobile .info-sheet { background: rgba(249,253,255,.96); }
+body .liquid-system .information-mobile.information-mobile .site-filing { width: 100%; padding: 8px 0 0; }
+@media (pointer: coarse), (max-width: 760px) {
+  .liquid-system .dashboard-shell.glass-map :is(.top-shell,.glass-navigation,.glass-search,.glass-filter,.glass-layer-tabs,.grid-legend,.map-controls,.panel-launchers button,.glass-national-total,.glass-quick-start,.overlay-card,.modal-card,.detail-drawer,.applicant-form,.result-panel),
+  .liquid-system .dashboard-shell.glass-map :is(.preview-reading-surface,.preview-ranking,.preview-conditions li) { -webkit-backdrop-filter: none; backdrop-filter: none; }
+  .liquid-system .dashboard-shell.glass-map .map-scene { filter: none; }
+  .liquid-system .dashboard-shell.glass-map .map-context-preview.has-decoration { --preview-reading-bg: rgba(248,252,255,.62); }
+  body .liquid-system .mobile-query.mobile-query :is(.mq-bottom-nav,.mq-guide-tabs,.mq-search,.mq-segment,.mq-scope-tabs),
+  body .liquid-system .information-mobile.information-mobile :is(.info-header,.insight-tabs,.info-batch-tabs,.info-bottom-nav,.information-filter) { -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); }
+}
+.liquid-system .dashboard-shell.glass-map.touch-performance-mode :is(.top-shell,.glass-navigation,.glass-search,.glass-filter,.glass-layer-tabs,.grid-legend,.map-controls,.panel-launchers button,.glass-national-total,.glass-quick-start,.overlay-card,.modal-card,.detail-drawer,.applicant-form,.result-panel,.preview-reading-surface,.preview-ranking,.preview-conditions li) { -webkit-backdrop-filter: none; backdrop-filter: none; }
+.liquid-system .dashboard-shell.glass-map.touch-performance-mode .map-scene { filter: none; }
+@media (prefers-reduced-motion: reduce) { .liquid-system .dashboard-shell.glass-map .map-scene { filter: none; } }
+@media (prefers-reduced-transparency: reduce), (prefers-contrast: more) {
+  .liquid-system .dashboard-shell.glass-map .map-context-preview.has-decoration { --preview-reading-bg: #f8fcff !important; background: #eef7ff !important; }
+  .liquid-system .dashboard-shell.glass-map .province-decoration { display: none; }
+  .liquid-system .dashboard-shell.glass-map :is(.top-shell,.glass-navigation,.glass-search,.glass-filter,.glass-layer-tabs,.grid-legend,.map-controls,.panel-launchers button,.glass-national-total,.glass-quick-start,.overlay-card,.modal-card,.detail-drawer,.applicant-form,.result-panel,.map-context-preview),
+  body .liquid-system .mobile-query.mobile-query :is(.mq-header,.mq-context-bar,.mq-bottom-nav,.mq-guide-tabs,.mq-search,.mq-segment,.mq-scope-tabs,.mq-summary,.mq-quick-card),
+  body .liquid-system .information-mobile.information-mobile :is(.info-header,.insight-tabs,.info-batch-tabs,.info-bottom-nav,.information-filter,.info-card,.info-ranking,.insight-company,.insight-card,.fact-card) {
+    background: #f8fcff !important; -webkit-backdrop-filter: none !important; backdrop-filter: none !important;
+  }
+}
+
+body .liquid-system .mobile-query.mobile-query .mq-site-filing { flex: 0 0 auto; font-size: 10px; background: rgba(244,251,255,.70); }
+body .liquid-system .mobile-query.mobile-query :is(.mq-entity-card,.mq-state,.mq-loading-card,.mq-more-filters,.mq-link-grid button,.archive-filters,.archive-card) { border-color: var(--liquid-edge); box-shadow: inset 0 1px 0 white,0 4px 14px rgba(35,78,108,.05); }
+body .liquid-system .information-mobile.information-mobile :is(.province-grid button,.insight-list,.information-filter) { border-color: var(--liquid-edge); background-color: rgba(252,254,255,.91); }
+
+body .liquid-system .mobile-query.mobile-query .mq-context-bar { background: linear-gradient(180deg,rgba(244,251,255,.70),rgba(244,251,255,.18)); }
+@media (prefers-reduced-transparency: reduce), (prefers-contrast: more) {
+  body .liquid-system .mobile-query.mobile-query { --mq-card: #f8fcff !important; --mq-glass: #f8fcff !important; --mq-active-glass: #dceefa !important; }
+  body .liquid-system .mobile-query.mobile-query :is(.mq-header,.mq-search,.mq-summary,.mq-quick-card,.mq-login-sheet,.mq-detail-sheet,.mq-help-sheet,.mq-overlay,.mq-segment button,.mq-scope-tabs button,.mq-bottom-nav::before) { -webkit-backdrop-filter: none !important; backdrop-filter: none !important; }
+  body .liquid-system .mobile-query.mobile-query :is(.mq-context-bar,.mq-entity-card,.mq-guide-tabs button,.mq-bottom-nav button) { background-color: #f8fcff !important; -webkit-backdrop-filter: none !important; backdrop-filter: none !important; }
+  body .liquid-system .mobile-query.mobile-query :is(.mq-guide-tabs button[aria-pressed='true'],.mq-bottom-nav button[aria-current='page']) { background-color: #dceefa !important; }
+  .liquid-system .dashboard-shell.glass-map :is(.preview-reading-surface,.preview-ranking,.preview-conditions li) { -webkit-backdrop-filter: none !important; backdrop-filter: none !important; }
+}
+
+body .liquid-system .information-mobile.information-mobile .insight-tabs { background: transparent; border: 0; box-shadow: none; -webkit-backdrop-filter: none; backdrop-filter: none; }
+body .liquid-system .information-mobile.information-mobile .info-batch-tabs { border-radius: 16px; }

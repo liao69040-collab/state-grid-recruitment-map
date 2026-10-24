@@ -1,0 +1,1 @@
+ALTER TABLE "source_documents" ADD COLUMN "content_text" text;

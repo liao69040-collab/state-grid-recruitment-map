@@ -1,0 +1,23 @@
+name: 功能建议 / Feature request
+description: 描述用户遇到的问题和期望的改进。
+title: "[Feature] "
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: 想解决什么问题 / User problem
+      description: 说明谁在什么场景下遇到什么困难。
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 期望的使用方式 / Proposed behavior
+      description: 描述一个简短的操作过程；不必预先决定技术实现。
+    validations:
+      required: true
+  - type: textarea
+    id: examples
+    attributes:
+      label: 例子与其他选择 / Examples and alternatives
+      description: 可附公开参考或已脱敏草图。请注明外部素材来源，不上传私有资料。

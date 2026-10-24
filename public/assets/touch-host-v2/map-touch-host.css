@@ -1,0 +1,127 @@
+html.touch-desktop-host,
+html.touch-desktop-host body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  background: #d9edf8;
+  overscroll-behavior: none;
+}
+
+.touch-desktop-host #map-touch-host {
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100dvh;
+  padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px);
+  overflow: hidden;
+  background: #d9edf8;
+}
+
+.touch-desktop-host #map-touch-viewport {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.touch-desktop-host #map-desktop-frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 1920px;
+  height: 1080px;
+  border: 0;
+  transform-origin: 0 0;
+  background: #e8f5fc;
+}
+
+.touch-desktop-host #map-touch-status {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  color: #285c7c;
+  background: #e8f5fc;
+  font: 16px/1.6 system-ui, sans-serif;
+}
+
+.touch-desktop-host #map-touch-status[hidden] { display: none; }
+
+.touch-desktop-host #map-touch-viewport[hidden],
+.touch-desktop-host #map-landscape-prompt[hidden],
+.touch-desktop-host #map-landscape-action[hidden] { display: none; }
+
+.touch-desktop-host #map-landscape-prompt {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  padding: 32px 24px;
+  overflow: auto;
+  text-align: center;
+  color: #143c62;
+  font: 16px/1.7 system-ui, sans-serif;
+  background: radial-gradient(ellipse at 50% 35%, #fff 0%, #eef8ff 48%, #d9edf8 100%);
+}
+
+.touch-desktop-host #map-landscape-title {
+  margin: 0;
+  font-size: clamp(20px, 5vw, 30px);
+  line-height: 1.4;
+}
+
+.touch-desktop-host #map-landscape-prompt p { max-width: 32em; margin: 0; }
+.touch-desktop-host #map-landscape-help { color: #496d87; font-size: 14px; }
+.touch-desktop-host #map-landscape-action {
+  min-height: 48px;
+  padding: 10px 24px;
+  border: 1px solid #1684bd;
+  border-radius: 12px;
+  background: #107eb7;
+  color: white;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+.touch-desktop-host #map-landscape-action:focus-visible { outline: 3px solid #153f74; outline-offset: 4px; }
+.touch-desktop-host #map-landscape-action:disabled { opacity: .6; }
+.touch-desktop-host .landscape-device {
+  flex: 0 0 auto;
+  width: 94px;
+  height: 48px;
+  margin-bottom: 12px;
+  border: 4px solid #1787c1;
+  border-radius: 12px;
+  box-shadow: inset 0 0 0 6px #eef8ff, 0 8px 24px #107eb718;
+  background: #c1e6fa;
+}
+
+.touch-desktop-host .touch-information-dialog {
+  position: fixed;
+  inset: 0;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: none;
+  height: 100dvh;
+  max-height: none;
+  margin: 0;
+  padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px);
+  border: 0;
+  background: #f3f8f6;
+  color: #173e35;
+  font: 15px/1.5 system-ui, sans-serif;
+}
+.touch-desktop-host .touch-information-dialog[open] { display: flex; flex-direction: column; }
+.touch-information-dialog::backdrop { background: #123a5490; }
+.touch-information-dialog header { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 8px 16px; border-bottom: 1px solid #dce8e3; flex: 0 0 auto; }
+.touch-information-dialog header button { min-width: 60px; min-height: 40px; border-radius: 8px; border: 1px solid #bed5cb; background: white; color: inherit; font: inherit; cursor: pointer; }
+.touch-information-dialog button:focus-visible { outline: 3px solid #126d56; outline-offset: 2px; }
+.touch-information-dialog iframe { display: block; width: 100%; min-height: 0; flex: 1; border: 0; background: #f3f8f6; }

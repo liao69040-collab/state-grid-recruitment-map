@@ -1,0 +1,10 @@
+{
+  "extends": "../platform/api/tsconfig.json",
+  "compilerOptions": {
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
+    "typeRoots": ["../platform/api/node_modules/@types"],
+    "types": ["node"]
+  },
+  "include": ["./*.ts"]
+}

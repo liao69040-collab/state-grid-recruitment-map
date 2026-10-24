@@ -1,0 +1,6 @@
+DROP INDEX "recruitment_metrics_school_destination_idx";--> statement-breakpoint
+ALTER TABLE "recruitment_metrics" ADD COLUMN "discipline_evidence_status" varchar(40) DEFAULT 'source_not_provided' NOT NULL;--> statement-breakpoint
+ALTER TABLE "recruitment_metrics" ADD COLUMN "major_evidence_status" varchar(40) DEFAULT 'source_not_provided' NOT NULL;--> statement-breakpoint
+CREATE INDEX "recruitment_metrics_school_destination_idx" ON "recruitment_metrics" USING btree ("cohort_year","school_id","destination_scope","province_id","company_id","discipline_group","discipline_evidence_status");--> statement-breakpoint
+ALTER TABLE "recruitment_metrics" ADD CONSTRAINT "recruitment_metrics_discipline_evidence_status_ck" CHECK ("recruitment_metrics"."discipline_evidence_status" in ('verified_source', 'partial_source', 'source_not_provided', 'pending_verification'));--> statement-breakpoint
+ALTER TABLE "recruitment_metrics" ADD CONSTRAINT "recruitment_metrics_major_evidence_status_ck" CHECK ("recruitment_metrics"."major_evidence_status" in ('verified_source', 'partial_source', 'source_not_provided', 'pending_verification'));

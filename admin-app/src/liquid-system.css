@@ -1,0 +1,34 @@
+.liquid-admin {
+  --ink: #103858; --muted: #365b75;
+  --surface: rgba(252,254,255,.93); --surface-soft: rgba(247,252,255,.89);
+  --admin-edge: rgba(255,255,255,.91);
+  --admin-glass-shadow: inset 0 1px 0 rgba(255,255,255,.96),0 12px 30px rgba(35,78,108,.09);
+  position: relative; isolation: isolate; min-height: 100vh;
+  font-family: -apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif;
+}
+.liquid-admin .app-shell, .liquid-admin .login-page { background: transparent; }
+.liquid-admin :is(.sidebar,.topbar,.login-card) {
+  border-color: var(--admin-edge); background: rgba(248,253,255,.72); box-shadow: var(--admin-glass-shadow);
+  -webkit-backdrop-filter: blur(16px) saturate(118%); backdrop-filter: blur(16px) saturate(118%);
+}
+.liquid-admin :is(.data-card,.dashboard-card,.summary-strip,.metric-card,.login-form-panel,.boundary-note,.hierarchy-strip) {
+  color: #103858; border-color: var(--admin-edge); background-color: var(--surface); box-shadow: var(--admin-glass-shadow);
+}
+.liquid-admin :is(.metric-card,.login-intro) {
+  background: linear-gradient(115deg,rgba(249,253,255,.95),rgba(238,249,255,.86)),url('./assets/transmission-20261004.webp') 58% 64%/cover;
+}
+.liquid-admin .login-intro { color: #103858; }
+.liquid-admin :is(.entity-dialog,.confirm-dialog) { border-color: var(--admin-edge); background: rgba(250,253,255,.97); box-shadow: var(--admin-glass-shadow),0 24px 65px rgba(29,79,112,.20); }
+.liquid-admin :is(.entity-dialog__header,.entity-dialog__footer,.data-toolbar,.pagination-bar) { background: rgba(244,250,255,.89); }
+.liquid-admin .sidebar-footer { background: rgba(247,252,255,.73); }
+.liquid-admin .data-table th { color: #315777; }
+.liquid-admin .data-table td { color: #254e6d; }
+@media (pointer: coarse), (max-width: 760px) {
+  .liquid-admin :is(.sidebar,.topbar,.login-card) { background: rgba(248,253,255,.92); -webkit-backdrop-filter: none; backdrop-filter: none; }
+}
+@media (prefers-reduced-transparency: reduce), (prefers-contrast: more) {
+  .liquid-admin :is(.sidebar,.topbar,.login-card,.data-card,.dashboard-card,.summary-strip,.metric-card,.login-intro,.login-form-panel,.boundary-note,.hierarchy-strip,.entity-dialog,.confirm-dialog) { background: #f8fcff; -webkit-backdrop-filter: none; backdrop-filter: none; }
+}
+
+.liquid-admin :is(.metric-card p,.admin-chip small,.login-assurances small,.form-field small,.result-count,.state-panel p) { color: #3c6078; }
+.liquid-admin .login-footnote { color: #3c6078 !important; }

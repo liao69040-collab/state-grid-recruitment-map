@@ -1,0 +1,43 @@
+name: 数据范围与来源纠错 / Data correction
+description: 反馈字段、地域、批次、学校校区或统计范围问题。
+title: "[Data] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        本地演示中的学校与业务数值为虚构，不需要按真实招聘数据纠正。请用此模板报告数据模型/统计逻辑错误，或有公开来源支持的在线内容问题。不要上传个人名册、联系方式或非公开原文。
+  - type: input
+    id: location
+    attributes:
+      label: 页面或代码位置 / Location
+      description: 页面入口、版本或相关文件位置。
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: 适用范围 / Scope
+      description: 注明年份、电网、批次、招聘主体、学校/校区和省份。说明省份是学校所在地还是招聘目的地。
+    validations:
+      required: true
+  - type: textarea
+    id: issue
+    attributes:
+      label: 当前问题与建议更正 / Problem and correction
+      description: 区分报名、计划、公示记录、入职，以及笔试线/综合线/高考分数。信息不足也可以明确说明缺失项。
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: 可公开核查的来源 / Public sources
+      description: 附官方公告或其他可核查原文链接、发布主体和日期。模型/逻辑问题可提供合成案例。
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: 公开内容确认
+      options:
+        - label: 所附信息允许公开，且不包含个人名册、凭据或私有资料。
+          required: true
